@@ -12,5 +12,6 @@ jobs:
           urls: |
             https://www.searspartsdirect.com
             https://www.searspartsdirect.com/brands/
+          configPath: ./lighthouserc.yml
           temporaryPublicStorage: true
           uploadArtifacts: true
