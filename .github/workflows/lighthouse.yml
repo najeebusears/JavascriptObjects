@@ -1,0 +1,16 @@
+# https://github.com/marketplace/actions/lighthouse-ci-action
+name: Lighthouse Audit
+on: push
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: |
+            https://www.searspartsdirect.com
+            https://www.searspartsdirect.com/brands/
+          temporaryPublicStorage: true
+          uploadArtifacts: true
